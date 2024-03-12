@@ -1,0 +1,281 @@
+/*estilo geral*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*para que todos fiquem na mesma borda da caixa*/
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    /*altura padrao*/
+
+}
+
+.interface {
+    /*essa div vai limitar ate onde vai fcar o limite do*/
+    max-width: 1280px;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgb(206, 206, 26);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: rgb(206, 206, 26);
+}
+
+/*estilo do cabecario*/
+
+header {
+    padding: 40px 4%;
+    /*encima e baixo 40px e 4% nas laterais*/
+}
+
+header>.interface {
+    /*dessa forma aestilizacao sera somente na clas interface*/
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*para ficarem o maximo distante um do outro*/
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    /*tira sublinhado do link*/
+}
+
+header nav ul {
+    list-style-type: nome;
+    /*tirar as bolinhas da ul*/
+}
+
+header nav ul li {
+    display: inline-block;
+    /*para a ul ficar uma ao lado da outra*/
+    padding: 0 25px;
+}
+
+.logo {
+    width: 180px;
+    border-radius: 60px;
+}
+
+/* estilo do topo do site*/
+
+section.topo-site {
+    padding: 40px 4%;
+}
+
+section.topo-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+}
+
+.topo-site h1 {
+    color: rgb(206, 206, 26);
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.topo-site .txt-topo-site h1 span {
+    color: #fff;
+}
+
+.topo-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-site .txt-topo-site p span {
+    color: rgb(206, 206, 26);
+}
+
+.topo-site .img-topo-site .imagem-homem-com-celular {
+    width: 400px;
+    border-radius: 30px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/*estilos de especialidaes*/
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+
+}
+
+.especialidades .especialidade-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: 2.s;
+}
+
+.especialidades .especialidade-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff73;
+}
+
+.especialidades .especialidade-box i {
+    font-size: 70px;
+    color: rgb(206, 206, 26);
+}
+
+.especialidades .especialidade-box h3 {
+    font-size: 28px;
+    margin: 15px;
+
+}
+
+.logo-footer {
+    width: 100px;
+    border-radius: 40px;
+
+}
+
+/*estilo rodape*/
+.btn-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(206, 206, 26);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+
+}
+
+footer {
+    padding: 20px 4%;
+    box-shadow: 0 0 20px 5px #ffffff73;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+
+}
+
+.borda {
+    border-top: 2px solid rgb(206, 206, 26);
+}
+
+footer .line-footer p i {
+    color: rgb(206, 206, 26);
+    font-size: 20px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+
+    /*clase geral*/
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+
+        font-size: 28px;
+        line-height: 35px;
+
+    }
+
+    /*cabecalho*/
+    .menu-site,
+    .btn-contato {
+        display: none;
+    }
+
+    /*topo do site*/
+
+
+    section.topo-site .flex {
+
+        gap: 40px;
+
+    }
+
+    section.topo-site {
+        padding: 20px 8%;
+    }
+
+    .topo-site h1 {
+        font-size: 25px;
+
+    }
+
+    .topo-site .img-topo-site .imagem-homem-com-celular {
+        width: 100%;
+    }
+
+    /*especialidades*/
+
+    section.topo-site {
+        padding: 40px 8%;
+    }
+    .especialidade-box{
+        text-align: center;
+    }
+    .btn-social{
+        text-align: center;
+    }
+
+    /*rodape*/
+
+    
+footer .flex {
+  flex-direction: column;
+}
+
+}
